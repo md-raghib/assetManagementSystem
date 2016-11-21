@@ -1,0 +1,99 @@
+package admin;
+
+import com.csc.bean.User;
+import com.csc.service.AdminService;
+import com.opensymphony.xwork2.ActionSupport;
+
+@SuppressWarnings("serial")
+public class AdminAction extends ActionSupport{
+	private int uid;
+	private int mid;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+	private String shortid;
+	private String mobile;
+	private String doj;
+	private String isActive;
+	User u;
+	
+	
+	
+	public int getUid() {
+		return uid;
+	}
+	
+	public int getMid() {
+		return mid;
+	}
+	public void setMid(int mid) {
+		this.mid = mid;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getShortid() {
+		return shortid;
+	}
+	public void setShortid(String shortid) {
+		this.shortid = shortid;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getDoj() {
+		return doj;
+	}
+	public void setDoj(String doj) {
+		this.doj = doj;
+	}
+	public String getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(String isActive) {
+		this.isActive = isActive;
+	}
+	public User getU() {
+		return u;
+	}
+	public void setU(User u) {
+		this.u = u;
+	}
+	
+	public String execute() {
+		
+		AdminService as=new AdminService();
+		
+		if((u=as.create())!=null){
+			return SUCCESS;
+		}
+		else
+			return ERROR;
+		
+	}
+}
