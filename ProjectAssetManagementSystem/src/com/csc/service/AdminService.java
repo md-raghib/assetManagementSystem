@@ -1,5 +1,7 @@
 package com.csc.service;
 
+import java.util.ArrayList;
+
 import com.csc.bean.User;
 import com.csc.dao.AdminDAO;
 
@@ -17,11 +19,13 @@ public class AdminService {
 		
 	}
 	
-	public User display(){
+	public ArrayList<User> display(){
 		AdminDAO.connect();
-		AdminDAO.displayUser();
+		ArrayList<User> al= AdminDAO.displayUser();
+		System.out.println("-----------------------In Service-----------------");
+		System.out.println(al);
+		return al;
 		
-		return null;
 	}
 	
 }

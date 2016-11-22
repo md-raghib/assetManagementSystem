@@ -11,10 +11,10 @@
 <h3>All Records:</h3>  
 <s:iterator  value="eList">  
 <fieldset>  
-<s:property value="user.userId"/><br/>  
-<s:property value="user.managerId"/><br/>  
-<s:property value="user.firstName"/><br/>  
-<s:property value="user.lastName"/><br/>  
+<s:property value="userId"/>
+<s:property value="managerId"/>
+<s:property value="firstName"/>
+<s:property value="lastName"/>  
 </fieldset>  
 </s:iterator>  
 

@@ -35,6 +35,14 @@ public class User {
 		//this.userType = userType;
 	}
 
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", managerId=" + managerId + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", email=" + email + ", password=" + password + ", shortId=" + shortId + ", mobileNumber="
+				+ mobileNumber + ", dateOfJoining=" + dateOfJoining + ", isActive=" + isActive + ", userType="
+				+ userType + "]";
+	}
+
 	public int getUserId() {
 		return userId;
 	}

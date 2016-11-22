@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import com.csc.bean.User;
 import com.csc.service.AdminService;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 
 @SuppressWarnings({ "serial" })
-public class ViewUserAction extends ActionSupport {
+public class ViewUserAction extends ActionSupport implements ModelDriven  {
 	
 	ArrayList<User> eList=new ArrayList<>();
 	
@@ -20,9 +21,16 @@ public class ViewUserAction extends ActionSupport {
 	
 	public String execute() {
 		AdminService as=new AdminService();
-		as.display();
+		eList=as.display();
+	System.out.println("-----------------------in ACTION-----------------------");
+	System.out.println(eList);
 	
 		return SUCCESS;
+	}
+	@Override
+	public ArrayList<User> getModel() {
+		// TODO Auto-generated method stub
+		return eList;
 	}
 	
 	

@@ -88,6 +88,7 @@ public class AdminDAO {
 				user.setDateOfJoining(rs.getString(9));
 				user.setIsActive(rs.getString(10));
 				al.add(user);
+				System.out.println(user);
 				
 			}
 			return al;
