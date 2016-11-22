@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<form method = "post" action="employeehome.jsp">
-userId: <input type="text" name="userId" placeholder="Enter the userid"><br>
-password: <input type="password" name="password" placeholder="Enter the password"><br>
-<input type="submit" value="submit">
-</form>
+<div class="alert alert-success">
+  <strong>Success!</strong> Request sent.
+</div>
+<jsp:include page="employeehome.jsp"></jsp:include>
 </body>
 </html>
