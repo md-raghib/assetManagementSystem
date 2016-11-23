@@ -1,2 +1,0 @@
-# assetManagementSystem
-java project
